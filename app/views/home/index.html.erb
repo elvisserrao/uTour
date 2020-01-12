@@ -1,2 +1,7 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<% if user_signed_in? %>
+  <%= render "home/logged_in"%>
+<% else %>
+  <h1>Bem vindo(a)!</h1>
+  <p class="lead">Já imaginou como seria ter um aplicativo para ser seu guia turistíco?</p>
+  <p class="lead">Uma plataforma prática, com todas os detalhes necessários para você planejar seu roteiro de viagem e ter a melhor experiência ao conhecer nossa cidade!</p>
+<% end %>
