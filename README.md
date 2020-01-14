@@ -1,24 +1,13 @@
-# README
+# uTour
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Plataforma para planejamento de roteiros de viagem.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+*
 
-* System dependencies
+## Authors
 
-* Configuration
+* [**Elvis Serrão**](https://github.com/elvisserrao) - *Trabalho Inicial*
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See also the list of [contributors](https://github.com/elvisserrao/uTour/graphs/contributors) who participated in this project.
