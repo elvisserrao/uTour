@@ -1,0 +1,21 @@
+<div class="page-header">
+  <%= link_to places_path, class: 'btn btn-default' do %>
+    All Places
+  <% end %>
+  <%= link_to edit_place_path(@place), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show place</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @place.name %></dd>
+
+  <dt>Type:</dt>
+  <dd><%= @place.type %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @place.description %></dd>
+
+</dl>
