@@ -1,23 +1,52 @@
-<div class="row">
-  <div class="col-md-12">
-  <h1>Seja bem vindo(a), <%= current_user.name %> !</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+    <h1>Seja bem vindo(a), <%= current_user.name %> !</h1>
+    </div>
   </div>
-</div>
 
-<div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-              <div class="card border-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Roteiro</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$215,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-plane fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-2 mb-3">
+      <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-header">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Roteiro</div>
+        </div>
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="h5 mb-0 font-weight-bold text-gray-800">R$215,000</div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-plane fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <% @places.each do |place|%>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-2 mb-3">
+        <div class="card border-left-info shadow h-100 py-2">
+          <div class="card-header">
+            <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><%= place.name %></div>
+          </div>
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-gray-800"> <%= place.description %> </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-store fa-2x"></i>
               </div>
             </div>
+          </div>
+          <div class="card-footer">
+            <span> <%= place.establishment %> </span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

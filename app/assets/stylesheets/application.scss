@@ -7,6 +7,7 @@
 @import "bootstrap";
 @import "jumpstart/sticky-footer";
 @import "jumpstart/announcements";
+@import "sbadmin2/sbadmin.scss";
 
 // Fixes bootstrap nav-brand container overlap
 @include media-breakpoint-down(xs) {
@@ -20,3 +21,19 @@
 body > .alert {
   margin-bottom: 0;
 }
+
+.card:hover div {
+  background-color: #dfdfdf;
+}
+
+.card:hover {
+  border-left: 0.25rem solid #1cc88a !important;
+}
+
+.card:hover i {
+  color: #13855c;
+}
+
+// .card-header:hover, .card-footer:hover {
+//   background-color: #dfdfdf;
+// }
