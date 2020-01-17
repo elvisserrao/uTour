@@ -23,6 +23,12 @@ pt-BR:
       announcement:
         one: Aviso
         other: Avisos
+      type:
+        one: Tipo
+        other: Tipos
+      place_type:
+        one: Tipo de lugar
+        other: Tipos de lugares
 
   date:
     abbr_day_names:
