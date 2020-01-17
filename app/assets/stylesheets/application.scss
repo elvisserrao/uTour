@@ -27,11 +27,8 @@ body > .alert {
 }
 
 .card:hover {
-  border-left: 0.25rem solid #1cc88a !important;
-}
-
-.card:hover i {
-  color: #13855c;
+  border-left: 0.25rem solid #888888 !important;
+  color: #888888;
 }
 
 // .card-header:hover, .card-footer:hover {
