@@ -16,3 +16,12 @@ admin = User
     password_confirmation: 'password',
     admin: true
   )
+  admin = User
+  .where(email: "julianacurvelo2@gmail.com")
+  .first_or_create(
+    first_name: 'Juliana',
+    last_name: 'Curvelo',
+    password: 'password',
+    password_confirmation: 'password',
+    admin: true
+  )
