@@ -9,22 +9,30 @@
   <div class="row">
     <% @places.each do |place|%>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-2 mb-3" style="color:<%= place.place_type.rgb_code %>;">
-        <div class="card shadow h-100" style="border-left: 0.25rem solid <%= place.place_type.rgb_code %>;">
-          <div class="card-header">
-            <div class="text-xs font-weight-bold text-uppercase mb-1"><%= place.name %></div>
-          </div>
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800 text-xs"> <%= place.description %> </div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-store fa-2x"></i>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card shadow h-100" style="border-left: 0.25rem solid <%= place.place_type.rgb_code %>;">
+                <div class="card-header">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1"><%= link_to place.name, place %></div>
+                </div>
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 text-xs"> <%= place.description %> </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-store fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <span> <%= place.place_type.name %> </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card-footer">
-            <span> <%= place.place_type.name %> </span>
+            <div class="flip-card-back">
+            </div>
           </div>
         </div>
       </div>

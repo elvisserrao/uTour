@@ -22,15 +22,51 @@ body > .alert {
   margin-bottom: 0;
 }
 
-.card:hover div {
-  background-color: #dfdfdf;
+// .card:hover div {
+//   background-color: #dfdfdf;
+// }
+
+// .card:hover {
+//   border-left: 0.25rem solid #888888 !important;
+//   color: #888888;
+// }
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.card:hover {
-  border-left: 0.25rem solid #888888 !important;
-  color: #888888;
+.flip-card a {
+  color: inherit;
 }
 
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(360deg);
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(360deg);
+}
 // .card-header:hover, .card-footer:hover {
 //   background-color: #dfdfdf;
 // }
+}

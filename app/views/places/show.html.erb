@@ -1,21 +1,19 @@
 <div class="page-header">
-  <%= link_to places_path, class: 'btn btn-default' do %>
-    All Places
-  <% end %>
-  <%= link_to edit_place_path(@place), class: 'btn btn-primary' do %>
-    Edit
-  <% end %>
-  <h1>Show place</h1>
+  <h1><%= @place.name %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Name:</dt>
-  <dd><%= @place.name %></dd>
+  <dt>Tipo:</dt>
+  <dd><%= @place.place_type.name %></dd>
 
-  <dt>Type:</dt>
-  <dd><%= @place.type %></dd>
-
-  <dt>Description:</dt>
+  <dt>Descrição:</dt>
   <dd><%= @place.description %></dd>
 
+  <% if @place.address %>
+    <dt>Endereço:</dt>
+      <dd><%= @place.address.address %>, <%= @place.address.number %>, <%= @place.address.neighborhood %>, <%= @place.address.city %></dd>
+  <% end %>
+  <%= link_to root_path, class: 'btn btn-outline-secondary' do %>
+    Voltar
+  <% end %>
 </dl>
