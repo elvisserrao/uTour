@@ -2,6 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   namespace :admin do
+    resources :addresses
     resources :places
     resources :place_types
     resources :users
