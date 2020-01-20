@@ -8,27 +8,48 @@ pt-BR:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
     models:
-      place:
-        one: Lugar
-        other: Lugares
-      user:
-        one: Usuário
-        other: Usuários
-      service:
-        one: Serviço
-        other: Serviços
-      notification:
-        one: Notificação
-        other: Notificações
+      address:
+        one: Endereço
+        other: Endereços
       announcement:
         one: Aviso
         other: Avisos
-      type:
-        one: Tipo
-        other: Tipos
+      notification:
+        one: Notificação
+        other: Notificações
+      place:
+        one: Lugar
+        other: Lugares
       place_type:
         one: Tipo de lugar
         other: Tipos de lugares
+      service:
+        one: Serviço
+        other: Serviços
+      type:
+        one: Tipo
+        other: Tipos
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      address:
+        address: Endereço
+        number: Número
+        city: Cidade
+        state: Estado
+        neighborhood: Bairro
+      announcement:
+        name: Nome
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+        published_at: Publicado em
+        announcement_type: Tipo de Aviso
+      user:
+        first_name: Primeiro Nome
+        last_name: Sobrenome
+
 
   date:
     abbr_day_names:
@@ -40,7 +61,6 @@ pt-BR:
     - Sex
     - Sáb
     abbr_month_names:
-    -
     - Jan
     - Fev
     - Mar
@@ -66,7 +86,6 @@ pt-BR:
       long: "%d de %B de %Y"
       short: "%d de %B"
     month_names:
-    -
     - Janeiro
     - Fevereiro
     - Março
