@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class PlaceDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -23,34 +25,34 @@ class PlaceDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-  id
-  name
-  description
-  place_type
-  address
+    id
+    name
+    description
+    place_type
+    address
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-  id
-  name
-  description
-  place_type
-  address
-  created_at
-  updated_at
+    id
+    name
+    description
+    place_type
+    address
+    created_at
+    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  name
-  description
-  place_type
-  address
-].freeze
+    name
+    description
+    place_type
+    address
+  ].freeze
 
   # COLLECTION_FILTERS
   # a hash that defines filters that can be used while searching via the search
@@ -68,6 +70,6 @@ class PlaceDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(place)
-    "#{place.name}"
+    place.name.to_s
   end
 end

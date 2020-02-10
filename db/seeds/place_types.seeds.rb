@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 p '*** Seeding Place types'
 types = [
   {
@@ -33,11 +35,11 @@ types = [
 ]
 types.each do |type|
   persisted = PlaceType
-    .where( type)
-    .first_or_create(
-      name: type[:name],
-      color: type[:color],
-      rgb_code: type[:rgb_code]
-    )
-    p "Created place types #{type[:name]}"
+              .where(type)
+              .first_or_create(
+                name: type[:name],
+                color: type[:color],
+                rgb_code: type[:rgb_code]
+              )
+  p "Created place types #{type[:name]}"
 end

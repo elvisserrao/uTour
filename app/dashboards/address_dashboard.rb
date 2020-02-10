@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class AddressDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -14,7 +16,7 @@ class AddressDashboard < Administrate::BaseDashboard
     number: Field::String,
     city: Field::String,
     state: Field::String,
-    neighborhood: Field::String,
+    neighborhood: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,33 +25,33 @@ class AddressDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-  place
-  id
-  address
-  number
+    place
+    id
+    address
+    number
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-  place
-  id
-  address
-  number
-  city
-  state
-  neighborhood
+    place
+    id
+    address
+    number
+    city
+    state
+    neighborhood
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  address
-  number
-  city
-  state
-  neighborhood
+    address
+    number
+    city
+    state
+    neighborhood
   ].freeze
 
   # COLLECTION_FILTERS
