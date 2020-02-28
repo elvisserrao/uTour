@@ -7,21 +7,19 @@ class Notification < ApplicationRecord
 
   scope :unread, -> { where(read_at: nil) }
   scope :recent, -> { order(created_at: :desc).limit(5) }
-
+  # rubocop:disable Metrics/MethodLength
   def self.post(to:, from:, action:, notifiable:)
     recipients = Array.wrap(to)
     notifications = []
-
     Notification.transaction do
       notifications = recipients.uniq.each do |recipient|
-        Notification.create(
-          notifiable: notifiable,
-          action: action,
-          recipient: recipient,
-          actor: from
-        )
+        Notification.create(notifiable: notifiable,
+                            action: action,
+                            recipient: recipient,
+                            actor: from)
       end
     end
     notifications
   end
+  # rubocop:enable Metrics/MethodLength
 end

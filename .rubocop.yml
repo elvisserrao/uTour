@@ -1,6 +1,50 @@
+require: rubocop-rspec
+
 AllCops:
+  TargetRubyVersion: 2.5
   Exclude:
+    - 'bin/**/*'
     - 'db/**/*'
     - 'config/**/*'
-    - 'script/**/*'
-    - 'node_modles/**/*'
+    - 'node_modules/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'test/test_helper.rb'
+    - 'tmp/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - app/controllers/users/omniauth_callbacks_controller.rb
+
+Metrics/LineLength:
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - app/controllers/users/omniauth_callbacks_controller.rb
+    - app/views/**/*.json.jbuilder
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    - app/controllers/users/omniauth_callbacks_controller.rb
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - test/channels/application_cable/connection_test.rb
+
+Style/Documentation:
+  Enabled: False
